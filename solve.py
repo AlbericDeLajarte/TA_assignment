@@ -34,8 +34,8 @@ print(prob.status)
 df = pd.DataFrame(columns=['TA','Task','Total workload [min]'])
 for i in range(NAGENT):
     df.loc[len(df)] = [assistants['name'][i], 
-                       (tasks['name'][np.where(x.value[i])[0]]).tolist(), 
-                       (x.value[i]*work_task).sum() + work_assistants[i]]
+                       ', '.join((tasks['name'][np.where(x.value[i])[0]]).tolist()), 
+                       ((x.value[i]*work_task).sum() + work_assistants[i]).astype(int)]
 
 print(df)
 df.to_csv(os.path.join(dirname, 'data', 'assignment.csv'), index=False)

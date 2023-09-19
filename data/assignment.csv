@@ -1,4 +1,4 @@
 TA,Task,Total workload [min]
-Bob,"['Task_3', 'Task_4']",100.0
-Alice,"['Task_1', 'Task_5']",100.0
-Christina,['Task_2'],100.0
+Bob,"Task_3, Task_4",100
+Alice,"Task_1, Task_5",100
+Christina,Task_2,100
